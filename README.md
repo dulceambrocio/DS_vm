@@ -3,11 +3,16 @@ Vagrant, Ansible and python data science libraries for data-science needs
 
 This a Vagrant+Ansible data science setup.
 
-Prerequirements are:
+Pre-requirements are:
 
--brew (to install Ansible) https://brew.sh 
--Vagrant 1.9.1+ https://www.vagrantup.com/downloads.html
--Ansible 2.2.1.0+ https://valdhaus.co/writings/ansible-mac-osx/
-
+<p>
+<strong>brew</strong> (to install Ansible) https://brew.sh 
+</p>
+<p>
+<strong>Vagrant 1.9.1+</strong> https://www.vagrantup.com/downloads.html
+</p>
+<p>
+<strong>Ansible 2.2.1.0+</strong> https://valdhaus.co/writings/ansible-mac-osx/
+</p>
 
 The vBox uses ubuntu/trusty64 with an automatic config.vm.network = en0 (update it as needed)

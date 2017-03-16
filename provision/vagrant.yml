@@ -1,7 +1,5 @@
 
 - hosts: all
-  vars:
-    venv_dir: ~/.environments
   roles:
       - setup      
 

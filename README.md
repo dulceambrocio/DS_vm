@@ -14,7 +14,9 @@ Pre-requirements are:
 <p>
 <strong>Ansible 2.2.1.0+</strong> https://valdhaus.co/writings/ansible-mac-osx/
 </p>
-
+<p>
+<strong>VirtualBox</strong> https://www.virtualbox.org/wiki/Downloads
+</p>
 The vBox uses ubuntu/trusty64 with an automatic config.vm.network = en0 (update it as needed)
 
 TO RUN: 

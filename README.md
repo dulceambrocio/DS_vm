@@ -16,3 +16,6 @@ Pre-requirements are:
 </p>
 
 The vBox uses ubuntu/trusty64 with an automatic config.vm.network = en0 (update it as needed)
+
+TO RUN: 
+vagrant up --provision

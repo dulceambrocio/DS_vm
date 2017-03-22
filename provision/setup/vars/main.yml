@@ -6,6 +6,9 @@ project: th_data
 virtualenvwrapper_python: "/usr/bin/python3"
 virtualenvwrapper_home: "/home/vagrant/.virtualenvs"
 
+psycopg2_installation:
+  - psycopg2
+
 python_packages:    
   # Python Dev     
   - psycopg2

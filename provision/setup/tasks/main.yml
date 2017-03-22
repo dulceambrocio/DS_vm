@@ -32,25 +32,33 @@
     - { line: 'workon {{ project }}', regexp: 'workon {{ project }}'} 
 
 - name: Install geodependencies with easy_install  
-  become: yes
+  become: yes  
   become_method: sudo
   easy_install: 
     name: "{{ item }}"
   with_items: "{{ geodepencies_easyinstall }}"
 
-- name: Install required Python packages.
-  become: yes
+- name: Install required psycopg2 packages.
+  become: yes  
   become_method: sudo
   pip: 
-    name: "{{ item }}"
+    name: "{{ item }}"    
     executable: pip3
-  with_items: "{{ python_packages }}"
+  with_items: "{{ psycopg2_installation }}"  
+
+- name: Install required Python packages.
+  pip: 
+    name: "{{ item }}"    
+    virtualenv: '{{virtualenvwrapper_home}}/{{project}}'    
+  with_items: "{{ python_packages }}"  
 
 - name: Allow password authentication for local socket users
   become: yes
   copy: src=pg_hba.conf dest=/etc/postgresql/9.6/main/pg_hba.conf force=yes
-  notify:
-      - Restart Postgres
+
+- name: Allow connections from everywhere to the VM
+  become: yes
+  copy: src=postgresql.conf dest=/etc/postgresql/9.6/main/postgresql.conf force=yes    
 
 - name: Create Database
   become: yes
@@ -65,4 +73,4 @@
 - name: Provide user with DB permissions
   become: yes
   become_user: postgres
-  postgresql_user: user={{ db_user }} db={{ db_name }} priv=ALL      
+  postgresql_user: user={{ db_user }} db={{ db_name }} priv=ALL        

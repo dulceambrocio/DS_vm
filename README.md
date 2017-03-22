@@ -21,3 +21,9 @@ The vBox uses ubuntu/trusty64 with an automatic config.vm.network = en0 (update 
 
 TO RUN: 
 vagrant up --provision
+
+AFTER RUN:
+vagrant ssh
+
+Once you are inside the vm:
+sudo services postgresql restart (needed to connect from outside the vm to the db)

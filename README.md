@@ -19,11 +19,17 @@ Pre-requirements are:
 </p>
 The vBox uses ubuntu/trusty64 with an automatic config.vm.network = en0 (update it as needed)
 
-TO RUN: 
+<p>
+<strong>TO RUN:</strong> 
 vagrant up --provision
+</p>
 
-AFTER RUN:
+<p>
+<strong>AFTER RUN:</strong>
 vagrant ssh
+</p>
 
-Once you are inside the vm:
+<<p>
+<strong>Once you are inside the vm:</strong>
 sudo services postgresql restart (needed to connect from outside the vm to the db)
+</p>

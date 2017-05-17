@@ -17,8 +17,9 @@ Pre-requirements are:
 <p>
 <strong>VirtualBox</strong> https://www.virtualbox.org/wiki/Downloads
 </p>
-The vBox uses ubuntu/trusty64 with an automatic config.vm.network = en0 (update it as needed)
-
+<<p>
+The vBox uses ubuntu/trusty64 with an automatic config.vm.network = en0 (update it as needed with en1, en2)
+</p>
 <p>
 <strong>TO RUN:</strong> 
 vagrant up --provision
@@ -26,10 +27,12 @@ vagrant up --provision
 
 <p>
 <strong>AFTER RUN:</strong>
+Once the installation is finished you need to connect to the vm
 vagrant ssh
 </p>
 
 <<p>
 <strong>Once you are inside the vm:</strong>
+Restart the database
 sudo services postgresql restart (needed to connect from outside the vm to the db)
 </p>

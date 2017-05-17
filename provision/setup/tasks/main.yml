@@ -74,3 +74,24 @@
   become: yes
   become_user: postgres
   postgresql_user: user={{ db_user }} db={{ db_name }} priv=ALL        
+
+- name: Create Postgis Extensions
+  become: yes
+  become_user: postgres
+  command: psql -d {{ db_name }} -c 'CREATE EXTENSION IF NOT EXISTS POSTGIS;'    
+
+- name: Grant raster_columns access
+  become: yes
+  become_user: postgres
+  command: psql -d {{ db_name }} -c 'GRANT ALL ON TABLE raster_columns TO {{ db_user }}';
+
+- name: Grant raster_overviews access
+  become: yes
+  become_user: postgres
+  command: psql -d {{ db_name }} -c 'GRANT ALL ON TABLE raster_overviews TO {{ db_user }}';
+
+- name: Grant spatial_ref_sys access
+  become: yes
+  become_user: postgres
+  command: psql -d {{ db_name }} -c 'GRANT ALL ON TABLE spatial_ref_sys TO {{ db_user }}';
+

@@ -33,6 +33,5 @@ vagrant ssh
 
 <<p>
 <strong>Once you are inside the vm:</strong>
-Restart the database
-sudo services postgresql restart (needed to connect from outside the vm to the db)
+sudo service postgresql restart (needed to connect from outside the vm to the db)
 </p>

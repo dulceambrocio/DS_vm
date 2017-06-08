@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)"
 
-  #config.vm.synced_folder "./project", "/home/vagrant/project"
+  config.vm.synced_folder "./sync", "/home/vagrant/sync"
 
   config.vm.provider "virtualbox" do |vb|
 	vb.memory = 2048

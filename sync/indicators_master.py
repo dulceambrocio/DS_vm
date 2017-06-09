@@ -75,7 +75,7 @@ print('initial len dep:',len(properties_for_rent[properties_for_rent['property_t
 #load settlements shapefile
 #path 							=	'settlements_df_truehome_version/'
 #filename 						=	'settlements_df_truehome_version.shp'
-path 							=	'/SETTLEMENTS/'
+path 							=	'SETTLEMENTS/'
 filename 						=	'settlements_CDMX.shp'
 polygons 						=	tools.load_geodataframe_from_shapefile_tool(path=path,shfilename=filename)
  
